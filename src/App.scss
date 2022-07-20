@@ -1,3 +1,189 @@
-.App {
-  text-align: center;
+body {
+  background-image: url("images/icon1.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-color: #ffffff;
+
+  img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .App {
+    .header {
+      width: 100vw;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #073761;
+      padding: 0 1rem 0 1rem;
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1rem;
+        color: white;
+        font-weight: bold;
+        margin: 0.7rem;
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+        span {
+          margin: 1rem;
+          a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #fcb8d2;
+          }
+          :hover {
+            color: white;
+          }
+        }
+      }
+    }
+    .allMeetupsPage {
+      text-align: center;
+
+      .allMeetups {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          text-decoration: none;
+          list-style: none;
+          margin-bottom: 1rem;
+          width: 20rem;
+        }
+        img {
+          width: 18rem;
+          height: 18rem;
+          border-radius: 0.7rem;
+        }
+      }
+    }
+    .newMeetupPage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      .formCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        padding: 1rem;
+        width: 30rem;
+        background-color: #c5d1e3;
+        border-radius: 0.7rem;
+        label,
+        textarea,
+        input {
+          width: 27rem;
+          margin: 0.2rem;
+        }
+        textarea {
+          border-radius: 0.7rem;
+          border: 1px solid rgb(170, 154, 118);
+        }
+        input {
+          height: 1.5rem;
+          border-radius: 0.7rem;
+          border: 1px solid rgb(170, 154, 118);
+        }
+        .btnAddMeetup {
+          background-color: #77002e;
+          color: white;
+          width: 7rem;
+          height: 2rem;
+          border-radius: 0.7rem;
+          margin-top: 1rem;
+          font-size: 0.9rem;
+          font-weight: bold;
+          :hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+    .pageFavorites {
+      text-align: center;
+
+      .favoriteMeetups {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          text-decoration: none;
+          list-style: none;
+          margin-bottom: 1rem;
+          width: 20rem;
+        }
+        img {
+          width: 18rem;
+          height: 18rem;
+          border-radius: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+    .App {
+      .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 6rem;
+        padding: 0;
+        .logo {
+          margin: 0;
+          img {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+        nav {
+          margin: 0;
+          gap: 1.5rem;
+          span {
+            margin: 0;
+          }
+        }
+      }
+      .newMeetupPage {
+        .formCard {
+          width: 20rem;
+          label,
+          textarea,
+          input {
+            width: 18rem;
+            margin: 0.2rem;
+          }
+        }
+      }
+    }
+  }
 }
