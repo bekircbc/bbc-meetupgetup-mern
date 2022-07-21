@@ -19,7 +19,7 @@ export function PageNewMeetup() {
       description: enteredDescription,
     };
 
-    fetch("http://locaĺhost:31456", {
+    fetch("http://locaĺhost:31456/login", {
       method: "POST",
       body: JSON.stringify(meetupData),
       headers: { "Content-Type": "application/json" },

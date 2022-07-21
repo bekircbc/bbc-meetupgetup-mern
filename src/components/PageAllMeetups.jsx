@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../AppContext";
 
 export function PageAllMeetups() {
-  const { isLoading, meetups, toggleFavoriteStatusHandler } =
+  const { isLoading, loadedMeetups, toggleFavoriteStatusHandler } =
     useContext(AppContext);
 
   return (
@@ -12,7 +12,7 @@ export function PageAllMeetups() {
         <p>Loading...</p>
       ) : (
         <ul className="allMeetups">
-          {meetups.map((meetup) => {
+          {loadedMeetups.map((meetup) => {
             return (
               <li key={meetup.id}>
                 <div>
