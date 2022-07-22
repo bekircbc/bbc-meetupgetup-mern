@@ -19,11 +19,14 @@ export function PageNewMeetup() {
       description: enteredDescription,
     };
 
-    fetch("http://locaĺhost:31456/login", {
-      method: "POST",
-      body: JSON.stringify(meetupData),
-      headers: { "Content-Type": "application/json" },
-    });
+    fetch(
+      "https://basic-streaming-app-default-rtdb.firebaseio.com/meetups.json",
+      {
+        method: "POST",
+        body: JSON.stringify(meetupData),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
   }
   return (
     <section className="newMeetupPage">
