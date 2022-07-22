@@ -122,6 +122,49 @@ body {
         }
       }
     }
+    .LoginPage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      .formCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        padding: 1rem;
+        width: 30rem;
+        background-color: #c5d1e3;
+        border-radius: 0.7rem;
+        label,
+        input {
+          width: 27rem;
+          margin: 0.2rem;
+        }
+        input {
+          height: 1.5rem;
+          border-radius: 0.7rem;
+          border: 1px solid rgb(170, 154, 118);
+        }
+        .btnLogin {
+          background-color: #77002e;
+          color: white;
+          width: 7rem;
+          height: 2rem;
+          border-radius: 0.7rem;
+          margin-top: 1rem;
+          font-size: 0.9rem;
+          font-weight: bold;
+          :hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
     .pageFavorites {
       text-align: center;
 
