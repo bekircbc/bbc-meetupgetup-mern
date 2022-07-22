@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import { AppContext } from "../AppContext";
 
 export function PageLogin() {
-  const { loginData, setLoginData } = useContext(AppContext);
+  const { loginData, setLoginData, backend_base_url } = useContext(AppContext);
   const usernameInputRef = useRef();
   const passwordInputRef = useRef();
   function submitHandler(event) {
@@ -15,16 +15,11 @@ export function PageLogin() {
       password: enteredPassword,
     });
 
-    return loginData;
-
-    //   fetch(
-    //     "https://basic-streaming-app-default-rtdb.firebaseio.com/meetups.json",
-    //     {
-    //       method: "POST",
-    //       body: JSON.stringify(meetupData),
-    //       headers: { "Content-Type": "application/json" },
-    //     }
-    //   );
+    fetch(backend_base_url + "/login", {
+      method: "POST",
+      body: JSON.stringify(loginData),
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   return (

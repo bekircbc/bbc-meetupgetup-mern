@@ -3,9 +3,8 @@ import axios from "axios";
 
 export const AppContext = createContext();
 
-const backend_base_url = "https://bbc-meetupgetup-mern-backend.herokuapp.com";
-
 export const AppProvider = ({ children }) => {
+  const backend_base_url = "https://bbc-meetupgetup-mern-backend.herokuapp.com";
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMeetups] = useState([]);
   const [loginData, setLoginData] = useState({});
@@ -29,6 +28,7 @@ export const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
+        backend_base_url,
         isLoading,
         isUserLoggedIn,
         setIsUserLoggedIn,
