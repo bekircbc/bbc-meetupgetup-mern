@@ -5,6 +5,7 @@ import { PageAllMeetups } from "./components/PageAllMeetups";
 import { PageFavorites } from "./components/PageFavorites";
 import { PageNewMeetup } from "./components/PageNewMeetup";
 import { PageLogin } from "./components/PageLogin";
+import { PageRegister } from "./components/PageRegister";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           <span>
             <NavLink to="login">Login</NavLink>
           </span>
+          <span>
+            <NavLink to="register">Register</NavLink>
+          </span>
         </nav>
 
         <Outlet />
@@ -38,6 +42,7 @@ function App() {
             <Route path="newmeetup" element={<PageNewMeetup />} />
             <Route path="favorites" element={<PageFavorites />} />
             <Route path="login" element={<PageLogin />} />
+            <Route path="register" element={<PageRegister />} />
             <Route path="/" element={<Navigate to="allmeetups" replace />} />
           </Route>
         </Routes>

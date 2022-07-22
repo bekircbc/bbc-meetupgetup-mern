@@ -1,19 +1,28 @@
 import { useRef } from "react";
 
-export function PageLogin() {
+export function PageRegister() {
   const usernameInputRef = useRef();
+  const firstNameInputRef = useRef();
+  const lastNameInputRef = useRef();
+  const emailInputRef = useRef();
   const passwordInputRef = useRef();
   function submitHandler(event) {
     event.preventDefault();
     const enteredUsername = usernameInputRef.current.value;
+    const enteredFirstName = firstNameInputRef.current.value;
+    const enteredLastName = lastNameInputRef.current.value;
+    const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    const loginData = {
+    const registerData = {
       username: enteredUsername,
+      fistName: enteredFirstName,
+      lastName: enteredLastName,
+      email: enteredEmail,
       password: enteredPassword,
     };
 
-    return loginData;
+    return registerData;
 
     //   fetch(
     //     "https://basic-streaming-app-default-rtdb.firebaseio.com/meetups.json",
@@ -32,10 +41,19 @@ export function PageLogin() {
         <label htmlFor="username">Username</label>
         <input type="text" required id="username" ref={usernameInputRef} />
 
+        <label htmlFor="firstname">Firstname</label>
+        <input type="text" required id="firstname" ref={firstNameInputRef} />
+
+        <label htmlFor="lastname">Lastname</label>
+        <input type="text" required id="lastname" ref={lastNameInputRef} />
+
         <label htmlFor="password">Password</label>
         <input type="password" required id="password" ref={passwordInputRef} />
 
-        <button className="btnLogin">Login</button>
+        <label htmlFor="e-mail">E-mail</label>
+        <input type="e-mail" required id="e-mail" ref={emailInputRef} />
+
+        <button className="btnLogin">Register</button>
       </form>
     </section>
   );
