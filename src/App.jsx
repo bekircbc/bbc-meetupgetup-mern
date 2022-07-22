@@ -4,6 +4,7 @@ import { Navigate, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import { PageAllMeetups } from "./components/PageAllMeetups";
 import { PageFavorites } from "./components/PageFavorites";
 import { PageNewMeetup } from "./components/PageNewMeetup";
+import { PageLogin } from "./components/PageLogin";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           <span>
             <NavLink to="favorites">My Favorites</NavLink>
           </span>
+          <span>
+            <NavLink to="login">Login</NavLink>
+          </span>
         </nav>
 
         <Outlet />
@@ -33,6 +37,7 @@ function App() {
             <Route path="allmeetups" element={<PageAllMeetups />} />
             <Route path="newmeetup" element={<PageNewMeetup />} />
             <Route path="favorites" element={<PageFavorites />} />
+            <Route path="login" element={<PageLogin />} />
             <Route path="/" element={<Navigate to="allmeetups" replace />} />
           </Route>
         </Routes>
