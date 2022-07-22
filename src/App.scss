@@ -74,6 +74,20 @@ body {
         }
       }
     }
+    .button-logout {
+      background-color: red;
+      color: white;
+      width: 7rem;
+      height: 2rem;
+      border-radius: 0.7rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+      :hover {
+        background-color: white;
+        color: black;
+      }
+    }
     .newMeetupPage {
       display: flex;
       flex-direction: column;
@@ -120,6 +134,40 @@ body {
             color: black;
           }
         }
+      }
+    }
+    .myMeetupsPage {
+      text-align: center;
+
+      .allMeetups {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          text-decoration: none;
+          list-style: none;
+          margin-bottom: 1rem;
+          width: 20rem;
+        }
+        img {
+          width: 18rem;
+          height: 18rem;
+          border-radius: 0.7rem;
+        }
+      }
+    }
+    .button-logout {
+      background-color: red;
+      color: white;
+      width: 7rem;
+      height: 2rem;
+      border-radius: 0.7rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+      :hover {
+        background-color: white;
+        color: black;
       }
     }
     .LoginPage {

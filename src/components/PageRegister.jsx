@@ -1,6 +1,8 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { AppContext } from "../AppContext";
 
 export function PageRegister() {
+  const { registerData } = useContext(AppContext);
   const usernameInputRef = useRef();
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();
@@ -14,13 +16,13 @@ export function PageRegister() {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    const registerData = {
+    setRegisterData({
       username: enteredUsername,
       fistName: enteredFirstName,
       lastName: enteredLastName,
       email: enteredEmail,
       password: enteredPassword,
-    };
+    });
 
     return registerData;
 

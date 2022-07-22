@@ -8,6 +8,8 @@ const backend_base_url = "https://bbc-meetupgetup-mern-backend.herokuapp.com";
 export const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMeetups] = useState([]);
+  const [loginData, setLoginData] = useState({});
+  const [registerData, setRegisterData] = useState({});
 
   useEffect(() => {
     (async () => {
@@ -27,6 +29,8 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         isLoading,
+        loginData,
+        registerData,
         loadedMeetups,
         toggleFavoriteStatusHandler,
       }}
