@@ -41,7 +41,7 @@ function App() {
               <span>
                 <button
                   className="button-logout"
-                  onClick={isUserLoggedInHandler()}
+                  onClick={isUserLoggedInHandler}
                 >
                   Logout
                 </button>
