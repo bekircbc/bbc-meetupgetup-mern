@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import { AppContext } from "../AppContext";
 
 export function PageLogin() {
-  const { loginData } = useContext(AppContext);
+  const { loginData, setLoginData } = useContext(AppContext);
   const usernameInputRef = useRef();
   const passwordInputRef = useRef();
   function submitHandler(event) {

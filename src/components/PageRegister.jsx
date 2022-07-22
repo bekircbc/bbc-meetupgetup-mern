@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import { AppContext } from "../AppContext";
 
 export function PageRegister() {
-  const { registerData } = useContext(AppContext);
+  const { registerData, setRegisterData } = useContext(AppContext);
   const usernameInputRef = useRef();
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();

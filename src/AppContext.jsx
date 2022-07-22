@@ -33,7 +33,9 @@ export const AppProvider = ({ children }) => {
         isUserLoggedIn,
         setIsUserLoggedIn,
         loginData,
+        setLoginData,
         registerData,
+        setRegisterData,
         loadedMeetups,
         toggleFavoriteStatusHandler,
       }}
