@@ -1,4 +1,5 @@
-// import { useEffect } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "./AppContext";
 import "./App.scss";
 import { Navigate, NavLink, Outlet, Route, Routes } from "react-router-dom";
 
@@ -10,10 +11,10 @@ import { PageRegister } from "./components/PageRegister";
 import { PageMyMeetups } from "./components/PageMyMeetups";
 
 function App() {
-  let isUserLoggedIn = true;
+  const { isUserLoggedIn, setIsUserLoggedIn } = useContext(AppContext);
 
   const isUserLoggedInHandler = () => {
-    isUserLoggedIn = false;
+    setIsUserLoggedIn(false);
   };
 
   return (

@@ -10,6 +10,7 @@ export const AppProvider = ({ children }) => {
   const [loadedMeetups, setLoadedMeetups] = useState([]);
   const [loginData, setLoginData] = useState({});
   const [registerData, setRegisterData] = useState({});
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -29,6 +30,8 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         isLoading,
+        isUserLoggedIn,
+        setIsUserLoggedIn,
         loginData,
         registerData,
         loadedMeetups,
