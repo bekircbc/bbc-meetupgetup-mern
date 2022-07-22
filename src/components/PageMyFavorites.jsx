@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
 
-export function PageFavorites() {
+export function PageMyFavorites() {
   const { loadedMeetups, toggleFavoriteStatusHandler } = useContext(AppContext);
   const filteredMeetups = loadedMeetups.filter((m) => m.isFavorite);
 

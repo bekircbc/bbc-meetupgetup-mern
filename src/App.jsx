@@ -3,7 +3,7 @@ import "./App.scss";
 import { Navigate, NavLink, Outlet, Route, Routes } from "react-router-dom";
 
 import { PageAllMeetups } from "./components/PageAllMeetups";
-import { PageFavorites } from "./components/PageFavorites";
+import { PageMyFavorites } from "./components/PageMyFavorites";
 import { PageNewMeetup } from "./components/PageNewMeetup";
 import { PageLogin } from "./components/PageLogin";
 import { PageRegister } from "./components/PageRegister";
@@ -33,7 +33,7 @@ function App() {
                 <NavLink to="newmeetup">Add New Meetup</NavLink>
               </span>
               <span>
-                <NavLink to="favorites">My Favorites</NavLink>
+                <NavLink to="myfavorites">My Favorites</NavLink>
               </span>
               <span>
                 <NavLink to="mymeetups">My Meetups</NavLink>
@@ -66,7 +66,7 @@ function App() {
           <Route>
             <Route path="allmeetups" element={<PageAllMeetups />} />
             <Route path="newmeetup" element={<PageNewMeetup />} />
-            <Route path="favorites" element={<PageFavorites />} />
+            <Route path="myfavorites" element={<PageMyFavorites />} />
             <Route path="mymeetups" element={<PageMyMeetups />} />
             <Route path="login" element={<PageLogin />} />
             <Route path="register" element={<PageRegister />} />
