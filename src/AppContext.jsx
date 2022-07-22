@@ -11,10 +11,8 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     (async () => {
-      const firebaseObj = (await axios.get(firebaseUrl)).data;
-      const _loadedMeetups = Object.entries(firebaseObj).map(
-        (entry) => entry[1]
-      );
+      const _loadedMeetups = (await axios.get(backend_base_url + "/meetups"))
+        .data;
       setLoadedMeetups(_loadedMeetups);
       setIsLoading(false);
     })();
