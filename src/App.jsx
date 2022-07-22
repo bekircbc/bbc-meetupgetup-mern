@@ -11,10 +11,14 @@ import { PageRegister } from "./components/PageRegister";
 import { PageMyMeetups } from "./components/PageMyMeetups";
 
 function App() {
-  const { isUserLoggedIn, setIsUserLoggedIn } = useContext(AppContext);
+  const { setCurrentUser, currentUser } = useContext(AppContext);
 
-  const isUserLoggedInHandler = () => {
-    setIsUserLoggedIn(false);
+  const handleLogoutButton = () => {
+    localStorage.removeItem("token");
+    setCurrentUser({
+      username: "anonymousUser",
+      accessGroups: ["loggedOutUsers"],
+    });
   };
 
   return (
@@ -28,7 +32,7 @@ function App() {
           <span>
             <NavLink to="allmeetups">All Meetups</NavLink>
           </span>
-          {isUserLoggedIn ? (
+          {currentUser.username !== anonymousUser ? (
             <>
               <span>
                 <NavLink to="newmeetup">Add New Meetup</NavLink>
@@ -40,10 +44,7 @@ function App() {
                 <NavLink to="mymeetups">My Meetups</NavLink>
               </span>
               <span>
-                <button
-                  className="button-logout"
-                  onClick={isUserLoggedInHandler}
-                >
+                <button className="button-logout" onClick={handleLogoutButton}>
                   Logout
                 </button>
               </span>
